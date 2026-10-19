@@ -73,38 +73,71 @@
      </strong>
      Turn reliable data into clear, evidence-based business recommendations.
     </p>
-    <div class="flow">
-     <div class="tile">
-      <span class="emoji">
+    <!-- EDIT: Four-step analysis workflow -->
+    <div aria-label="Four-step data analytics process" class="process">
+     <div class="process-step">
+      <span class="process-icon">
        ▤
+      </span>
+      <span class="process-number">
+       01
       </span>
       <strong>
        Collect
       </strong>
       <small>
-       Retrieve approved records
+       Retrieve approved data
       </small>
      </div>
-     <div class="tile">
-      <span class="emoji">
+     <div aria-hidden="true" class="process-arrow">
+      &rarr;
+     </div>
+     <div class="process-step">
+      <span class="process-icon">
        &checkmark;
+      </span>
+      <span class="process-number">
+       02
       </span>
       <strong>
        Clean
       </strong>
       <small>
-       Validate and document
+       Validate records
       </small>
      </div>
-     <div class="tile">
-      <span class="emoji">
+     <div aria-hidden="true" class="process-arrow">
+      &rarr;
+     </div>
+     <div class="process-step">
+      <span class="process-icon">
        ▥
       </span>
+      <span class="process-number">
+       03
+      </span>
       <strong>
-       Communicate
+       Analyze
       </strong>
       <small>
-       Explain business findings
+       Calculate key metrics
+      </small>
+     </div>
+     <div aria-hidden="true" class="process-arrow">
+      &rarr;
+     </div>
+     <div class="process-step">
+      <span class="process-icon">
+       &nearrow;
+      </span>
+      <span class="process-number">
+       04
+      </span>
+      <strong>
+       Report
+      </strong>
+      <small>
+       Explain business insights
       </small>
      </div>
     </div>
@@ -138,8 +171,11 @@
      </strong>
      Verify calculations, document assumptions, and review outputs before distribution.
     </p>
-    <div class="tools">
+    <div class="tools tool-visuals">
      <div class="tile">
+      <span class="tool-category">
+       SPREADSHEETS
+      </span>
       <span class="emoji">
        ▦
       </span>
@@ -151,6 +187,9 @@
       </small>
      </div>
      <div class="tile">
+      <span class="tool-category">
+       DATABASE
+      </span>
       <span class="emoji">
        ⌘
       </span>
@@ -162,6 +201,9 @@
       </small>
      </div>
      <div class="tile">
+      <span class="tool-category">
+       VISUALIZATION
+      </span>
       <span class="emoji">
        ▥
       </span>
@@ -182,48 +224,49 @@
      A Typical Workday
     </h2>
     <p class="muted">
-     Illustrative schedule; adjust priorities to deadlines and supervisor guidance.
+     Illustrative schedule; lunch breaks and priorities may vary by company policy and project deadlines.
     </p>
     <div class="timeline">
      <div class="time">
       <b>
-       9:00AM&ndash;9:30AM
+       9:00&ndash;9:30
       </b>
       Review requests and priorities
      </div>
      <div class="time">
       <b>
-       9:30AM&ndash;11:00AM
+       9:30&ndash;11:00
       </b>
       Collect and check data
      </div>
      <div class="time">
       <b>
-       11:00AM&ndash;12:00PM
+       11:00&ndash;12:00
       </b>
       Prepare and clean records
      </div>
-     <div class="time">
+     <!-- EDIT: Lunch break -->
+     <div class="time lunch">
       <b>
-       12:00PM&ndash;1:00PM
+       12:00&ndash;1:00
       </b>
-      Lunch Break
+      Lunch break
      </div>
      <div class="time">
       <b>
-       1:00PM&ndash;3:00PM
+       1:00&ndash;3:00
       </b>
       Calculate KPIs and investigate trends
      </div>
      <div class="time">
       <b>
-       3:00PM&ndash;4:30PM
+       3:00&ndash;4:30
       </b>
       Update and verify reports
      </div>
      <div class="time">
       <b>
-       4:30PM&ndash;5:00PM
+       4:30&ndash;5:00
       </b>
       Share progress and document issues
      </div>
@@ -263,6 +306,71 @@
 FROM sales_orders
 WHERE order_date &gt;= '2026-09-01'
   AND order_date &lt; '2026-10-01';</code></pre>
+    <!-- EDIT: Illustrative SQL output table -->
+    <div class="sample-output">
+     <div class="visual-heading">
+      <span class="visual-dot">
+      </span>
+      <strong>
+       Sample query results
+      </strong>
+      <small>
+       Illustrative records
+      </small>
+     </div>
+     <div class="table-scroll">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          order_id
+         </th>
+         <th>
+          order_date
+         </th>
+         <th>
+          sales_amount
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          1001
+         </td>
+         <td>
+          2026-09-02
+         </td>
+         <td>
+          $240.00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          1002
+         </td>
+         <td>
+          2026-09-04
+         </td>
+         <td>
+          $185.00
+         </td>
+        </tr>
+        <tr>
+         <td>
+          1003
+         </td>
+         <td>
+          2026-09-07
+         </td>
+         <td>
+          $320.00
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
     <div class="note">
      <strong>
       Checkpoint:
@@ -383,23 +491,45 @@ WHERE order_date &gt;= '2026-09-01'
     <p class="muted" style="font-size:12px">
      Illustrative figures, not actual company data.
     </p>
+    <div class="visual-heading chart-heading">
+     <span class="visual-dot">
+     </span>
+     <strong>
+      Monthly sales trend
+     </strong>
+     <small>
+      Illustrative data &middot; $ thousands
+     </small>
+    </div>
     <div aria-label="Illustrative monthly sales: July 10 thousand, August 13 thousand, September 17 thousand, October 20 thousand" class="chart" role="img">
      <div class="bar" style="height:50%">
+      <b class="bar-value">
+       $10k
+      </b>
       <span>
        Jul
       </span>
      </div>
      <div class="bar" style="height:65%">
+      <b class="bar-value">
+       $13k
+      </b>
       <span>
        Aug
       </span>
      </div>
      <div class="bar" style="height:85%">
+      <b class="bar-value">
+       $17k
+      </b>
       <span>
        Sep
       </span>
      </div>
      <div class="bar" style="height:100%">
+      <b class="bar-value">
+       $20k
+      </b>
       <span>
        Oct
       </span>
@@ -426,6 +556,30 @@ WHERE order_date &gt;= '2026-09-01'
      <summary>
       What if values are missing?
      </summary>
+     <!-- EDIT: Troubleshooting decision guide -->
+     <div aria-label="Troubleshooting flow" class="decision-guide">
+      <div class="decision-title">
+       Having a data issue?
+      </div>
+      <div class="decision-branches">
+       <div>
+        <strong>
+         Missing or unusual values
+        </strong>
+        <span>
+         Flag &rarr; investigate &rarr; consult project owner
+        </span>
+       </div>
+       <div>
+        <strong>
+         Database access error
+        </strong>
+        <span>
+         Check permissions &rarr; contact administrator
+        </span>
+       </div>
+      </div>
+     </div>
      <p>
       Flag the records, investigate the source, and consult the project owner before assuming replacement values.
      </p>
