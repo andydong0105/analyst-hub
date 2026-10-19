@@ -109,10 +109,10 @@ main {
     color:var(--navy)
 }
 .num {
-    color: var(--blue);
-    font-size: 25px;
-    font-weight: 700;
-    margin-right: 12px;
+    color:var(--blue);
+    font-size:25px;
+    font-weight:700;
+    margin-right:12px
 }
 .muted {
     color:var(--muted)
@@ -298,4 +298,118 @@ footer {
 @media (max-width: 750px) {
     .brand { width: fit-content; }
     .brand img { width: 190px; }
+}
+
+/* =========================================================
+   VISUAL COMPONENTS — edit these styles to change infographics
+   ========================================================= */
+.process { display:flex; align-items:stretch; gap:10px; margin:25px 0 5px; }
+.process-step { flex:1; min-width:0; display:flex; flex-direction:column; gap:5px; background:linear-gradient(160deg,#eff6ff,#ffffff); border:1px solid #cddff5; border-radius:12px; padding:16px 12px; }
+.process-icon { display:grid; place-items:center; width:44px; height:44px; border-radius:12px; background:#dbeafe; color:#1d4ed8; font-size:25px; font-weight:800; }
+.process-number { color:#3b82f6; font-size:11px; letter-spacing:.1em; font-weight:800; }
+.process-step strong { color:#142d4e; font-size:17px; }
+.process-step small { color:#58677a; line-height:1.4; }
+.process-arrow { align-self:center; color:#2563eb; font-size:26px; font-weight:700; }
+.tool-visuals .tile { position:relative; background:linear-gradient(145deg,#f3f8ff,#fff); border-top:4px solid #3b82f6; }
+.tool-category { display:block; font-size:10px; font-weight:800; letter-spacing:.1em; color:#537ba8; margin-bottom:9px; }
+.tool-visuals .emoji { display:block; color:#2563eb; font-size:34px; margin-bottom:8px; }
+.time.lunch { background:#f0f7f6; border-left-color:#15803d; }
+.sample-output { margin-top:20px; border:1px solid #dce4ee; border-radius:12px; overflow:hidden; }
+.sample-output table { margin:0; font-size:13px; }
+.visual-heading { display:flex; align-items:center; flex-wrap:wrap; gap:9px; padding:12px 15px; background:#edf4ff; color:#142d4e; }
+.visual-heading small { color:#58677a; margin-left:auto; }
+.visual-dot { background:#2563eb; width:9px; height:9px; border-radius:50%; }
+.chart-heading { border-radius:9px; margin-top:23px; }
+.bar-value { position:absolute; top:-26px; left:0; right:0; text-align:center; font-size:12px; color:#142d4e; }
+.decision-guide { margin:22px 0; border:1px solid #cbdcf2; border-radius:12px; background:#f8fbff; padding:18px; text-align:center; }
+.decision-title { display:inline-block; background:#142d4e; color:white; padding:9px 18px; border-radius:8px; font-weight:700; margin-bottom:20px; }
+.decision-branches { display:grid; grid-template-columns:1fr 1fr; gap:12px; position:relative; }
+.decision-branches > div { border:1px solid #cbdcf2; border-top:3px solid #2563eb; border-radius:9px; background:white; padding:14px; text-align:left; }
+.decision-branches strong, .decision-branches span { display:block; }
+.decision-branches span { font-size:13px; color:#58677a; margin-top:5px; }
+@media (max-width:750px) { .process { display:grid; grid-template-columns:1fr; } .process-arrow { transform:rotate(90deg); } .decision-branches { grid-template-columns:1fr; } }
+
+
+/* =========================================================
+   LIGHT / DARK MODE — edit the variables below to customize.
+   ========================================================= */
+:root {
+    color-scheme: light;
+    --surface: #ffffff;
+    --surface-soft: #f8faff;
+    --surface-time: #f5f8fd;
+    --surface-note: #eff6ff;
+    --surface-table: #eaf2fd;
+    --surface-heading: #edf4ff;
+    --surface-lunch: #f0f7f6;
+    --surface-decision: #f8fbff;
+    --chart-ink: #142d4e;
+}
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --navy: #d7e8ff;
+    --blue: #82b6ff;
+    --ink: #e5edf8;
+    --muted: #b4c4d8;
+    --bg: #0b1524;
+    --line: #34465e;
+    --surface: #152338;
+    --surface-soft: #1d2e47;
+    --surface-time: #1b2e48;
+    --surface-note: #1b3453;
+    --surface-table: #253d5a;
+    --surface-heading: #203b5c;
+    --surface-lunch: #163c36;
+    --surface-decision: #14283f;
+    --chart-ink: #e5edf8;
+}
+/* Header and hero remain navy in both modes for consistent branding. */
+header { background: #142d4e; }
+.section { background: var(--surface); }
+.tile, .tool-visuals .tile { background: var(--surface-soft); }
+.time { background: var(--surface-time); }
+.time.lunch { background: var(--surface-lunch); }
+.note, .metrics .tile { background: var(--surface-note); }
+th { background: var(--surface-table); }
+.visual-heading { background: var(--surface-heading); color: var(--ink); }
+.visual-heading small { color: var(--muted); }
+.decision-guide { background: var(--surface-decision); border-color: var(--line); }
+.decision-branches > div { background: var(--surface); border-color: var(--line); }
+.decision-branches span { color: var(--muted); }
+.process-step { background: var(--surface-soft); border-color: var(--line); }
+.process-step strong, .tool-visuals .tile strong { color: var(--navy); }
+.process-step small { color: var(--muted); }
+.bar-value { color: var(--chart-ink); }
+footer { color: var(--muted); }
+/* Always keep text readable inside the fixed dark decision heading. */
+.decision-title { color: #ffffff; }
+/* Positive and warning labels need brighter contrast on dark surfaces. */
+html[data-theme="dark"] .bad { color: #ffaaa4; }
+html[data-theme="dark"] .good { color: #79ddb0; }
+html[data-theme="dark"] .tool-category { color: #9dc7f7; }
+html[data-theme="dark"] .process-icon { background: #25476b; color: #b5d5ff; }
+html[data-theme="dark"] .btn { color: #142d4e; }
+
+/* Accessible mode switch in the top-right navigation. */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 9px 12px;
+    border: 1px solid #8da7c5;
+    border-radius: 9px;
+    background: #27476b;
+    color: #ffffff;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.theme-toggle:hover { background: #36618d; }
+.theme-toggle:focus-visible { outline: 3px solid #a8d5ff; outline-offset: 3px; }
+.theme-icon { font-size: 19px; line-height: 1; }
+@media (max-width: 750px) {
+    .theme-toggle { margin-top: 12px; }
 }
