@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Analyst Hub | Procedural Manual
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="favicon.png" rel="icon" type="image/png"/>
+ </head>
+ <body>
+  <header>
+   <div class="brand">
+    <img alt="Analyst Hub &mdash; Turning Data into Insights" src="analyst-hub-logo.png"/>
+   </div>
+   <nav>
+    <a href="#overview">
+     Overview
+    </a>
+    <a href="#policies">
+     Policies
+    </a>
+    <a href="#day">
+     Workday
+    </a>
+    <a href="#collect">
+     Collect
+    </a>
+    <a href="#clean">
+     Clean
+    </a>
+    <a href="#report">
+     Report
+    </a>
+    <a href="#faq">
+     FAQ
+    </a>
+   </nav>
+  </header>
+  <div class="hero">
+   <div class="wrap">
+    <div class="eyebrow">
+     New Employee Onboarding &bull; Internal Training Guide
+    </div>
+    <h1>
+     Data Analyst
+     <br/>
+     Procedural Manual
+    </h1>
+    <p>
+     From raw data to actionable business insights. A practical guide for new analysts to complete a routine sales analysis independently.
+    </p>
+    <a class="btn" href="#overview">
+     Explore the guide &darr;
+    </a>
+   </div>
+  </div>
+  <main>
+   <section class="section" id="overview">
+    <h2>
+     <span class="num">
+      01
+     </span>
+     Introduction &amp; Overview
+    </h2>
+    <p>
+     This manual guides new analysts through a routine business analysis assignment, from retrieving data to reporting results. Follow each checkpoint to ensure work is accurate, secure, and easy for others to reproduce.
+    </p>
+    <p>
+     <strong>
+      Objective:
+     </strong>
+     Turn reliable data into clear, evidence-based business recommendations.
+    </p>
+    <div class="flow">
+     <div class="tile">
+      <span class="emoji">
+       ▤
+      </span>
+      <strong>
+       Collect
+      </strong>
+      <small>
+       Retrieve approved records
+      </small>
+     </div>
+     <div class="tile">
+      <span class="emoji">
+       &checkmark;
+      </span>
+      <strong>
+       Clean
+      </strong>
+      <small>
+       Validate and document
+      </small>
+     </div>
+     <div class="tile">
+      <span class="emoji">
+       ▥
+      </span>
+      <strong>
+       Communicate
+      </strong>
+      <small>
+       Explain business findings
+      </small>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="policies">
+    <h2>
+     <span class="num">
+      02
+     </span>
+     Workplace Policies &amp; Tools
+    </h2>
+    <p>
+     <strong>
+      Security:
+     </strong>
+     Access only authorized datasets. Never store confidential customer information on personal devices or share it outside approved systems.
+    </p>
+    <p>
+     <strong>
+      File management:
+     </strong>
+     Preserve original datasets; save working files in approved shared folders using consistent names, such as
+     <code>
+      Sales_Report_2026_10_v1.xlsx
+     </code>
+     .
+    </p>
+    <p>
+     <strong>
+      Quality assurance:
+     </strong>
+     Verify calculations, document assumptions, and review outputs before distribution.
+    </p>
+    <div class="tools">
+     <div class="tile">
+      <span class="emoji">
+       ▦
+      </span>
+      <strong>
+       Excel
+      </strong>
+      <small>
+       Cleaning and PivotTables
+      </small>
+     </div>
+     <div class="tile">
+      <span class="emoji">
+       ⌘
+      </span>
+      <strong>
+       SQL
+      </strong>
+      <small>
+       Database queries
+      </small>
+     </div>
+     <div class="tile">
+      <span class="emoji">
+       ▥
+      </span>
+      <strong>
+       Power BI
+      </strong>
+      <small>
+       Dashboards and charts
+      </small>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="day">
+    <h2>
+     <span class="num">
+      03
+     </span>
+     A Typical Workday
+    </h2>
+    <p class="muted">
+     Illustrative schedule; adjust priorities to deadlines and supervisor guidance.
+    </p>
+    <div class="timeline">
+     <div class="time">
+      <b>
+       9:00AM&ndash;9:30AM
+      </b>
+      Review requests and priorities
+     </div>
+     <div class="time">
+      <b>
+       9:30AM&ndash;11:00AM
+      </b>
+      Collect and check data
+     </div>
+     <div class="time">
+      <b>
+       11:00AM&ndash;12:00PM
+      </b>
+      Prepare and clean records
+     </div>
+     <div class="time">
+      <b>
+       12:00PM&ndash;1:00PM
+      </b>
+      Lunch Break
+     </div>
+     <div class="time">
+      <b>
+       1:00PM&ndash;3:00PM
+      </b>
+      Calculate KPIs and investigate trends
+     </div>
+     <div class="time">
+      <b>
+       3:00PM&ndash;4:30PM
+      </b>
+      Update and verify reports
+     </div>
+     <div class="time">
+      <b>
+       4:30PM&ndash;5:00PM
+      </b>
+      Share progress and document issues
+     </div>
+    </div>
+   </section>
+   <section class="section" id="collect">
+    <h2>
+     <span class="num">
+      04
+     </span>
+     Step-by-Step: Collect Sales Data
+    </h2>
+    <p>
+     <strong>
+      Goal:
+     </strong>
+     Retrieve one month of transactions from an authorized database.
+    </p>
+    <ol class="steps">
+     <li>
+      Open the approved SQL client and sign in with company credentials.
+     </li>
+     <li>
+      Select the authorized sales database and verify table and column names.
+     </li>
+     <li>
+      Run the sample query below, adapting it to the actual database schema.
+     </li>
+     <li>
+      Check the returned columns, dates, and record count.
+     </li>
+     <li>
+      Export a CSV to the approved folder; record the source, query, and extraction date.
+     </li>
+    </ol>
+    <pre><code>SELECT order_id, order_date, sales_amount
+FROM sales_orders
+WHERE order_date &gt;= '2026-09-01'
+  AND order_date &lt; '2026-10-01';</code></pre>
+    <div class="note">
+     <strong>
+      Checkpoint:
+     </strong>
+     Confirm that the date range and record count match the request.
+    </div>
+   </section>
+   <section class="section" id="clean">
+    <h2>
+     <span class="num">
+      05
+     </span>
+     Step-by-Step: Clean &amp; Validate
+    </h2>
+    <p>
+     <strong>
+      Goal:
+     </strong>
+     Prepare an accurate dataset without removing legitimate records.
+    </p>
+    <ol class="steps">
+     <li>
+      Open the CSV in Excel and save a separate working copy.
+     </li>
+     <li>
+      Filter for missing values; flag incomplete records for investigation.
+     </li>
+     <li>
+      Highlight duplicate transaction IDs; verify whether duplicates are errors.
+     </li>
+     <li>
+      Standardize dates and numeric formats; inspect unusual sales amounts.
+     </li>
+     <li>
+      Compare counts and totals against the original; document every correction.
+     </li>
+    </ol>
+    <div class="table-scroll">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         Before review
+        </th>
+        <th>
+         After verification
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td class="bad">
+         101 | $500
+         <br/>
+         101 | $500 (duplicate)
+        </td>
+        <td class="good">
+         101 | $500 (one verified record)
+        </td>
+       </tr>
+       <tr>
+        <td class="bad">
+         102 | Missing
+        </td>
+        <td>
+         102 | Flagged for follow-up
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="note">
+     <strong>
+      Checkpoint:
+     </strong>
+     Resolve or escalate significant discrepancies before analysis.
+    </div>
+   </section>
+   <section class="section" id="report">
+    <h2>
+     <span class="num">
+      06
+     </span>
+     Analyze &amp; Report
+    </h2>
+    <p>
+     Calculate total sales, average transaction value, and monthly growth. Use PivotTables or Power BI to summarize results. Choose bar charts for category comparisons and line charts for trends.
+    </p>
+    <p>
+     Verify reporting periods, formulas, labels, and access permissions. State the main finding in plain language, explain its business impact, and recommend a next step.
+    </p>
+    <div class="metrics">
+     <div class="tile">
+      <small>
+       Total sales
+      </small>
+      <strong>
+       $42,500
+      </strong>
+     </div>
+     <div class="tile">
+      <small>
+       Transactions
+      </small>
+      <strong>
+       250
+      </strong>
+     </div>
+     <div class="tile">
+      <small>
+       Average transaction
+      </small>
+      <strong>
+       $170
+      </strong>
+     </div>
+    </div>
+    <p class="muted" style="font-size:12px">
+     Illustrative figures, not actual company data.
+    </p>
+    <div aria-label="Illustrative monthly sales: July 10 thousand, August 13 thousand, September 17 thousand, October 20 thousand" class="chart" role="img">
+     <div class="bar" style="height:50%">
+      <span>
+       Jul
+      </span>
+     </div>
+     <div class="bar" style="height:65%">
+      <span>
+       Aug
+      </span>
+     </div>
+     <div class="bar" style="height:85%">
+      <span>
+       Sep
+      </span>
+     </div>
+     <div class="bar" style="height:100%">
+      <span>
+       Oct
+      </span>
+     </div>
+    </div>
+    <p class="muted" style="margin-top:36px;font-size:12px">
+     Example chart: illustrative sales trend.
+    </p>
+    <div class="note">
+     <strong>
+      Final check:
+     </strong>
+     Does the report answer the original business question?
+    </div>
+   </section>
+   <section class="section" id="faq">
+    <h2>
+     <span class="num">
+      07
+     </span>
+     FAQ &amp; Resources
+    </h2>
+    <details>
+     <summary>
+      What if values are missing?
+     </summary>
+     <p>
+      Flag the records, investigate the source, and consult the project owner before assuming replacement values.
+     </p>
+    </details>
+    <details>
+     <summary>
+      What if my SQL query returns no results?
+     </summary>
+     <p>
+      Check the connection, permissions, table names, filters, and date range. Escalate access problems to the database administrator.
+     </p>
+    </details>
+    <details>
+     <summary>
+      What if totals differ from an existing report?
+     </summary>
+     <p>
+      Compare sources, date ranges, filters, and calculation methods. Document differences before publication.
+     </p>
+    </details>
+    <details>
+     <summary>
+      Who can help?
+     </summary>
+     <p>
+      Contact your supervisor for priorities, the database administrator for access, and the reporting team for dashboard standards.
+     </p>
+    </details>
+    <p>
+     <strong>
+      Reference links:
+     </strong>
+     <a href="https://support.microsoft.com/excel" rel="noopener" target="_blank">
+      Excel Support
+     </a>
+     &middot;
+     <a href="https://learn.microsoft.com/sql/" rel="noopener" target="_blank">
+      SQL Documentation
+     </a>
+     &middot;
+     <a href="https://learn.microsoft.com/power-bi/" rel="noopener" target="_blank">
+      Power BI Documentation
+     </a>
+    </p>
+   </section>
+  </main>
+  <footer>
+   ANALYST HUB &bull; New Employee Procedural Manual
+   <span class="edit">
+    &bull; Editable HTML template
+   </span>
+  </footer>
+ </body>
+</html>
